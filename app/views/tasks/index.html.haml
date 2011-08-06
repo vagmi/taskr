@@ -1,6 +1,17 @@
-%h3.bucket_name= @bucket.name
-%p= @bucket.description
+- if @bucket
+  .bucket
+    %h3= @bucket.name
+    %p= @bucket.description
 %ul#tasks
   - @tasks.each do |t|
-    %li= t.title
-=link_to 'New Task',new_bucket_task_path(@bucket)
+    - unless t.new_record?
+      %li
+        =t.title
+        =link_to 'complete', complete_task_path(t), :confirm=>'Are you sure?', :method=>'post'
+- if @bucket
+  = semantic_form_for [@bucket,@task] do |f|
+    %fieldset
+      %ol
+        =f.input :title, :label=>"New Task"
+        =f.input :bucket_id, :as=>:hidden
+    =f.buttons

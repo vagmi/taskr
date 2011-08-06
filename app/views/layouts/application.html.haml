@@ -2,10 +2,10 @@
 %html
   %head
     %title Taskr
-    = stylesheet_link_tag 'formtastic.css'
-    = stylesheet_link_tag 'formtastic_changes.css'
+    = stylesheet_link_tag 'formtastic.css', :media=> 'screen, projection'
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'print.css', :media => 'print'
+    = stylesheet_link_tag 'formtastic_changes.css'
     /[if IE]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
     = javascript_include_tag :defaults
@@ -15,6 +15,9 @@
     #container
       #header
         %h1 Taskr
+      %ul#nav
+        %li(class='#{is_current?('buckets')}')= link_to "buckets", buckets_path
+        %li(class='#{is_current?('tasks')}')= link_to "tasks", tasks_path
       #content
         .notice= notice
         =yield

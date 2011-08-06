@@ -5,15 +5,16 @@ Taskr::Application.routes.draw do
   #/buckets/1/tasks/done
   #POST /tasks/1/complete to complete
   resources :buckets, :shallow=>true do 
-    resources :tasks do
+    resources :tasks, :shallow=>true do
       collection do
         get 'done'
         get 'pending'
       end
-      member do
-        post 'complete'
-      end
     end
   end
-  resources :tasks, :only=>[:index]
+  resources :tasks, :only=>[:index] do
+    member do
+      post 'complete'
+    end
+  end
 end
