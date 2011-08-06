@@ -1,0 +1,6 @@
+%h3.bucket_name= @bucket.name
+%p= @bucket.description
+%ul#tasks
+  - @tasks.each do |t|
+    %li= t.title
+=link_to 'New Task',new_bucket_task_path(@bucket)
