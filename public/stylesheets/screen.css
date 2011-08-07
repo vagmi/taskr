@@ -82,16 +82,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin: 10px 0;
 }
 
-/* line 15, ../../app/stylesheets/_tasks.sass */
-form fieldset ol li label {
-  display: block;
-  width: 100%;
-}
-/* line 18, ../../app/stylesheets/_tasks.sass */
-form fieldset ol li input[type=text] {
-  width: 400px;
-}
-
 /* line 10, ../../app/stylesheets/screen.sass */
 body {
   font-family: sans-serif;

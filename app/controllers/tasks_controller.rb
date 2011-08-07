@@ -19,5 +19,8 @@ class TasksController < ApplicationController
     end
   end
   def complete
+    @task = Task.find(params[:id])
+    @task.complete!
+    redirect_to bucket_tasks_path(@task.bucket)
   end
 end

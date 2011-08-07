@@ -6,8 +6,11 @@
   - @tasks.each do |t|
     - unless t.new_record?
       %li
+        - if t.done
+          [done]
         =t.title
-        =link_to 'complete', complete_task_path(t), :confirm=>'Are you sure?', :method=>'post'
+        - unless t.done
+          =link_to 'complete', complete_task_path(t), :confirm=>'Are you sure?', :method=>'post'
 - if @bucket
   = semantic_form_for [@bucket,@task] do |f|
     %fieldset
