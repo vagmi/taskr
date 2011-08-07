@@ -107,5 +107,6 @@ DEPENDENCIES
   haml
   jquery-rails
   rails (= 3.0.9)
+  rake
   sqlite3
   thin
