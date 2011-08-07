@@ -1,5 +1,6 @@
 class Task < ActiveRecord::Base
   belongs_to :bucket
+  belongs_to :user
   has_many :taggables
   has_many :tags, :through=>:taggables
   #before_save :set_tags

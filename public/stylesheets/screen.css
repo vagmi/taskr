@@ -113,10 +113,30 @@ body a {
 }
 /* line 20, ../../app/stylesheets/screen.sass */
 #container #header h1 {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
   font-size: 32px;
   color: #01113b;
 }
-/* line 23, ../../app/stylesheets/screen.sass */
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspundit/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #container #header h1 {
+  overflow-x: hidden;
+}
+/* line 24, ../../app/stylesheets/screen.sass */
+#container #header .login_information {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 390px;
+  float: right;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspundit/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #container #header .login_information {
+  overflow-x: hidden;
+}
+/* line 27, ../../app/stylesheets/screen.sass */
 #container ul#nav {
   display: inline;
   float: left;
@@ -128,25 +148,25 @@ body a {
 * html #container ul#nav {
   overflow-x: hidden;
 }
-/* line 26, ../../app/stylesheets/screen.sass */
+/* line 30, ../../app/stylesheets/screen.sass */
 #container ul#nav li {
   display: inline-block;
   margin-right: 5px;
   padding: 15px;
 }
-/* line 30, ../../app/stylesheets/screen.sass */
+/* line 34, ../../app/stylesheets/screen.sass */
 #container ul#nav li a {
   text-decoration: none;
 }
-/* line 32, ../../app/stylesheets/screen.sass */
+/* line 36, ../../app/stylesheets/screen.sass */
 #container ul#nav li.selected {
   background-color: #583100;
 }
-/* line 34, ../../app/stylesheets/screen.sass */
+/* line 38, ../../app/stylesheets/screen.sass */
 #container ul#nav li.selected a {
   color: white;
 }
-/* line 39, ../../app/stylesheets/screen.sass */
+/* line 43, ../../app/stylesheets/screen.sass */
 #container #content {
   display: inline;
   float: left;
@@ -158,7 +178,7 @@ body a {
 * html #container #content {
   overflow-x: hidden;
 }
-/* line 42, ../../app/stylesheets/screen.sass */
+/* line 46, ../../app/stylesheets/screen.sass */
 #container #footer {
   display: inline;
   float: left;

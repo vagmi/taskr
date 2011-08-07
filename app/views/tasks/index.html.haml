@@ -18,3 +18,12 @@
         =f.input :title, :label=>"New Task"
         =f.input :bucket_id, :as=>:hidden
     =f.buttons
+  %h3 Share this bucket
+  = form_tag share_bucket_path(@bucket) do 
+    = label_tag 'Email'
+    = email_field_tag 'share[email]'
+    %br
+    = label_tag 'Name'
+    = text_field_tag 'share[name]'
+    %br
+    = submit_tag "Share"

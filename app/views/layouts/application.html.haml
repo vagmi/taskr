@@ -15,11 +15,17 @@
     #container
       #header
         %h1 Taskr
-      %ul#nav
-        %li(class='#{is_current?('buckets')}')= link_to "buckets", buckets_path
-        %li(class='#{is_current?('tasks')}')= link_to "tasks", tasks_path
+        .login_information
+          - if current_user
+            Signed in as #{current_user.email}. 
+            =link_to 'Sign out', destroy_user_session_path, :method=>'delete'
+      - if current_user
+        %ul#nav
+          %li(class='#{is_current?('buckets')}')= link_to "buckets", buckets_path
+          %li(class='#{is_current?('tasks')}')= link_to "tasks", tasks_path
       #content
         .notice= notice
+        .alert= alert
         =yield
       #footer
         %p Created at Rails Pundit

@@ -38,5 +38,16 @@ module Taskr
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+
+    ActionMailer::Base.delivery_method=:smtp
+    ActionMailer::Base.smtp_settings = {
+      :tls=>true,
+      :host=>"smtp.gmail.com",
+      :port=>587,
+      :user_name=>"railspundit.dcmanor@gmail.com",
+      :password=>"A very secret password"
+    }
+
   end
 end
