@@ -18,7 +18,7 @@ class BucketsController < ApplicationController
   def share
     share = params[:share]
     @bucket = Bucket.find(params[:id])
-    Share.by_email(@bucket,share[:name],share[:email]).deliver
+    Share.by_email(@bucket,share[:name],share[:email]).deliver!
     redirect_to bucket_tasks_path(@bucket), :notice=>"List has been shared successfully"
   end
   def show

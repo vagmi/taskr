@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
+gem 'rake'
 gem 'sqlite3'
 gem 'formtastic'
 gem 'jquery-rails'
